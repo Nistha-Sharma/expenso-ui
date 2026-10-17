@@ -1,3 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+.notification-success .mdc-snackbar__surface {
+  background: #166534 !important;
+}
+
+.notification-error .mdc-snackbar__surface {
+  background: #b91c1c !important;
+}
+
+.notification-warning .mdc-snackbar__surface {
+  background: #92400e !important;
+}
+
+.notification-info .mdc-snackbar__surface {
+  background: #1d4ed8 !important;
+}
+
+.notification-success .mdc-snackbar__label,
+.notification-error .mdc-snackbar__label,
+.notification-warning .mdc-snackbar__label,
+.notification-info .mdc-snackbar__label {
+  color: #ffffff !important;
+}
+
+/* Prevent white hover background on snackbar Close button */
+.notification-success,
+.notification-error,
+.notification-warning,
+.notification-info,
+.notification-loading {
+  .mat-mdc-button-touch-target {
+    background-color: transparent !important;
+  }
+
+  .mat-mdc-button-persistent-ripple::before,
+  .mat-mdc-button-persistent-ripple::after {
+    background-color: transparent !important;
+  }
+
+  .mat-mdc-snack-bar-action,
+  .mat-mdc-snack-bar-action:hover,
+  .mat-mdc-snack-bar-action:focus,
+  .mat-mdc-snack-bar-action:active {
+    color: #ffffff !important;
+    background-color: transparent !important;
+  }
+}
+
